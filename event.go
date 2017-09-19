@@ -19,10 +19,10 @@ type Dispatcher interface {
 }
 
 type dispatcher struct {
+	listenerIdx uint64
 	blocking    bool
 	bufferDepth int
 	inCh        chan interface{}
-	listenerIdx uint64
 }
 
 // NewDispatcher creates a new Dispatcher. bufferDepth controls the depth of
